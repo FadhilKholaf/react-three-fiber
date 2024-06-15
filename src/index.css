@@ -1,0 +1,10 @@
+*{
+  margin: 0;
+  pad: 0;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
