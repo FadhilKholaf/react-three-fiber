@@ -1,12 +1,15 @@
 import { Canvas } from "@react-three/fiber";
 import "./App.css";
 import Amba from "./components/Amba";
+import { Suspense } from "react";
 
 function App() {
   return (
     <>
       <Canvas>
-        <Amba />
+        <Suspense fallback={<>Loading...</>}>
+          <Amba />
+        </Suspense>
       </Canvas>
     </>
   );
