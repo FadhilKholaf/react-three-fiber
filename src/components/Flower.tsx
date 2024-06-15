@@ -4,8 +4,8 @@ Command: npx gltfjsx@6.2.18 public/models/flower.glb -t
 */
 
 import * as THREE from "three";
-import React, { useRef } from "react";
-import { useGLTF, useAnimations } from "@react-three/drei";
+import { useRef } from "react";
+import { useGLTF /*useAnimations*/ } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 
 type GLTFResult = GLTF & {
@@ -50,17 +50,17 @@ type ActionName =
 interface GLTFAction extends THREE.AnimationClip {
   name: ActionName;
 }
-type ContextType = Record<
-  string,
-  React.ForwardRefExoticComponent<JSX.IntrinsicElements["mesh"]>
->;
+// type ContextType = Record<
+//   string,
+//   React.ForwardRefExoticComponent<JSX.IntrinsicElements["mesh"]>
+// >;
 
 export default function Flower(props: JSX.IntrinsicElements["group"]) {
   const group = useRef<THREE.Group | null>(null);
-  const { nodes, materials, animations } = useGLTF(
+  const { nodes, materials /*animations*/ } = useGLTF(
     "/models/flower.glb"
   ) as GLTFResult;
-  const { actions } = useAnimations(animations, group);
+  // const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
