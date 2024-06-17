@@ -15,7 +15,7 @@ export default function Flower() {
       />
       <FlowerModel position={[0, -1, 0]} scale={[0.5, 0.5, 0.5]} />
       <EffectComposer>
-        <ASCII characters=" TRISNA" fontSize={60} />
+        <ASCII characters=" TRISNA" fontSize={50}/>
       </EffectComposer>
     </>
   );
