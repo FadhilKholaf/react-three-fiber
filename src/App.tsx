@@ -1,14 +1,20 @@
 import { Canvas } from "@react-three/fiber";
 import "./App.css";
-import Amba from "./components/Amba";
+import Flower from "./components/Flower";
 import { Suspense } from "react";
 
 function App() {
   return (
     <>
       <Canvas>
-        <Suspense fallback={<>Loading...</>}>
-          <Amba />
+        <Suspense
+          fallback={
+            <>
+              <h1>Loading...</h1>
+            </>
+          }
+        >
+          <Flower />
         </Suspense>
       </Canvas>
     </>
