@@ -1,6 +1,6 @@
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import FlowerModel from "./FlowerModel";
-import { Bloom, EffectComposer, Pixelation } from "@react-three/postprocessing";
+import { ASCII, EffectComposer } from "@react-three/postprocessing";
 
 export default function Flower() {
   return (
@@ -13,14 +13,9 @@ export default function Flower() {
         autoRotate
         autoRotateSpeed={5}
       />
-      <FlowerModel position={[0, -0.7, 0]} scale={[0.4, 0.4, 0.4]} />
+      <FlowerModel position={[0, -1, 0]} scale={[0.5, 0.5, 0.5]} />
       <EffectComposer>
-        <Pixelation granularity={5} />
-        <Bloom
-          luminanceThreshold={0.1}
-          luminanceSmoothing={0.4}
-          intensity={0.4}
-        />
+        <ASCII characters=" TRISNA" fontSize={60} />
       </EffectComposer>
     </>
   );
