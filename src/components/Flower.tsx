@@ -11,7 +11,7 @@ export default function Flower() {
         enableZoom={false}
         enableRotate={false}
         autoRotate
-        autoRotateSpeed={5}
+        autoRotateSpeed={3}
       />
       <FlowerModel position={[0, -1, 0]} scale={[0.5, 0.5, 0.5]} />
       <EffectComposer>
