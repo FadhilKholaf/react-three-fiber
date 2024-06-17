@@ -7,15 +7,7 @@ function App() {
   return (
     <>
       <Canvas>
-        <Suspense
-          fallback={
-            <>
-              <h1>Loading...</h1>
-            </>
-          }
-        >
-          <Flower />
-        </Suspense>
+        <Flower />
       </Canvas>
     </>
   );
